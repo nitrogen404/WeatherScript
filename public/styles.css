@@ -1,0 +1,110 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.container {
+  width: 100%;
+  
+}
+
+.text {
+  margin-top: -420px;
+  z-index: 3;
+}
+
+.particles {
+  display: block;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: -150px;
+}
+
+.appname {
+  display: inline-block;
+  margin-left: 270px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 100px;
+  font-weight: 800;
+}
+
+.reactangle {
+  margin-top: 50px;
+  margin-left: 470px;
+  height: 30px;
+  width: 350px;
+  background-color: #D6E8EF;
+}
+
+.credits {
+  margin-top: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+  text-align: center;
+}
+
+.circle {
+  border: 25px solid #F3E8D6;
+  background-color: transparent;
+  height: 800px;
+  width: 800px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  margin-top: 00px;
+  margin-left: -700px;
+  float: left;
+  z-index: -1;
+}
+
+.middlebody {
+  z-index: 1;
+  margin-top: 300px;
+}
+
+.weathercard {
+  z-index: 2;
+  width: 900px;
+  height: 400px;
+  position: absolute;
+  background-color: #D3DCE7;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 35px;
+  box-shadow: 20px 20px 30px 10px rgba(120, 120, 120, 0.25);
+  border-radius: 50px;
+  padding: 70px;
+  margin-top: 200px;
+  margin-left: 200px;
+}
+
+@media only screen and (max-device-width: 600px) and (min-device-width: 375px){
+  body {
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+  }
+
+  .particles {
+    margin-left: -20px;
+    height: 100vh;
+  }
+  
+  .appname {
+    font-size: 50px;
+    margin-top: 300px;
+    margin-left: 0px;
+  }
+
+  .reactangle {
+    right: 170px;
+  }
+
+  .credits {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-left: 0px;
+  }
+}
