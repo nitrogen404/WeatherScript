@@ -1,9 +1,9 @@
 import React from "react";
 
-export function hOne(props) {
+export function Hone(props) {
     return <h1 className="appname">{props.name}</h1>
 }
 
-export function paraGraph(props) {
+export function Paragraph(props) {
     return <p className="credits" >{props.content}</p>
 }

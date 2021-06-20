@@ -5,7 +5,7 @@ body {
 
 .container {
   width: 100%;
-  
+
 }
 
 .text {
@@ -79,21 +79,81 @@ body {
   margin-left: 200px;
 }
 
-@media only screen and (max-device-width: 600px) and (min-device-width: 375px){
+.weathercard h1 {
+  font-size: 72px;
+  font-weight: 600;
+  margin-top: 70px;
+}
+
+.weathercard h3 {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.weathercard h5 {
+  margin-left: 0px;
+}
+
+.weathercard h6 {
+  margin-left: calc(100% - 70px);
+}
+
+.inputdiv {
+  position: absolute;
+  margin-top: 00px;
+  margin-left: 480px;
+  padding: 10px;
+}
+
+.inputbar {
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 5px;
+  width: 300px;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 19px;
+  border: none;
+}
+
+.submitbtn {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  box-shadow: 5px 5px 5px 3px rgba(120, 120, 120, 0.25);
+  background-color: #1c89ff;
+  color: #fff;
+  width: 200px;
+  height: 50px;
+  border-radius: 20px;
+  border: none;
+  margin-top: 80px;
+  margin-left: 55px;
+}
+
+@media only screen and (max-device-width: 600px) and (min-device-width: 320px){
   body {
     padding: 0px;
     margin: 0px;
     overflow-x: hidden;
   }
 
+  .container {
+    width: 100vw;
+  }
+
   .particles {
-    margin-left: -20px;
+    width: 100%;
+    margin-left: 0;
     height: 100vh;
   }
   
   .appname {
     font-size: 50px;
-    margin-top: 300px;
+    margin-top: 100px;
     margin-left: 0px;
   }
 
@@ -101,10 +161,69 @@ body {
     right: 170px;
   }
 
+  .circle {
+    height: 600px;
+    width: 600px;
+    border: 15px solid #F3E8D6;
+    margin-left: -500px;
+    margin-top: -30px;
+  }
+
   .credits {
     text-align: center;
     font-size: 14px;
     margin-top: 10px;
     margin-left: 0px;
+  }
+
+  .weathercard {
+    width: 370px;
+    height: 300px;
+    margin-left: 0px;
+    margin-top: 210px;
+    font-size: 25px;
+    padding: 36px;
+  }
+
+  .weathercard h1 {
+    font-size: 60px;
+    font-weight: 600;
+    margin-top: 55px;
+  }
+
+  .weathercard h3 {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  .weathercard h5 {
+    margin-left: 0px;
+  }
+
+  .weathercard h6 {
+    margin-left: calc(100% - 50px);
+    margin-top: -30px;
+  }
+
+  .inputdiv {
+    margin-top: 00px;
+    padding: 10px;
+    margin-left: 70px;
+  } 
+
+  .submitbtn {
+    width: 150px;
+    height: 50px;
+    margin-left: 30px;
+    
+  }
+
+  .inputbar {
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
   }
 }
