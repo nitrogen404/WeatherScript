@@ -14,5 +14,6 @@ export default function Card(props) {
         <h1>{props.currtemp}</h1>
         <h5>{props.curweather}</h5>
         <h6>{props.minmax}</h6>
+        <img src={ props.icon} alt="" />
     </div>
 }

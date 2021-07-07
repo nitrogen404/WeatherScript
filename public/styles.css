@@ -5,7 +5,6 @@ body {
 
 .container {
   width: 100%;
-
 }
 
 .text {
@@ -24,7 +23,7 @@ body {
 .appname {
   display: inline-block;
   margin-left: 270px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 100px;
   font-weight: 800;
 }
@@ -34,19 +33,19 @@ body {
   margin-left: 470px;
   height: 30px;
   width: 350px;
-  background-color: #D6E8EF;
+  background-color: #d6e8ef;
 }
 
 .credits {
   margin-top: 40px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 300;
   font-size: 17px;
   text-align: center;
 }
 
 .circle {
-  border: 25px solid #F3E8D6;
+  border: 25px solid #f3e8d6;
   background-color: transparent;
   height: 800px;
   width: 800px;
@@ -68,8 +67,8 @@ body {
   width: 900px;
   height: 400px;
   position: absolute;
-  background-color: #D3DCE7;
-  font-family: 'Montserrat', sans-serif;
+  background-color: #d3dce7;
+  font-family: "Montserrat", sans-serif;
   font-weight: 300;
   font-size: 35px;
   box-shadow: 20px 20px 30px 10px rgba(120, 120, 120, 0.25);
@@ -98,6 +97,15 @@ body {
   margin-left: calc(100% - 70px);
 }
 
+.weathercard img {
+  margin-left: calc(100% - 90px);
+  margin-top: -300px;
+  position: relative;
+  margin-bottom: 100px;
+  height: 150px;
+  width: 150px;
+}
+
 .inputdiv {
   position: absolute;
   margin-top: 00px;
@@ -113,14 +121,15 @@ body {
   border-radius: 10px;
   padding: 10px;
   text-align: left;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 300;
   font-size: 19px;
   border: none;
+  text-align: center;
 }
 
 .submitbtn {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 300;
   font-size: 15px;
   box-shadow: 5px 5px 5px 3px rgba(120, 120, 120, 0.25);
@@ -134,7 +143,42 @@ body {
   margin-left: 55px;
 }
 
-@media only screen and (max-device-width: 600px) and (min-device-width: 320px){
+.forecastbtn {
+  margin-top: 700px;
+}
+
+.main {
+  max-width: 1200px;
+  margin-top: 100px;
+  position: absolute;
+  margin-left: 125px;
+}
+
+.cards {
+  margin-top: 150px;
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.singlecard {
+  padding: 60px;
+  display: inline-block;
+}
+
+/* 411019 */
+.forecastcard {
+  width: 400px;
+  height: 300px;
+  background-color: #f3e8d6;
+  box-shadow: 20px 20px 30px 10px rgb(120 120 120 / 25%);
+  border-radius: 50px;
+  padding: 50px;
+  justify-content: center;
+}
+
+@media only screen and (max-device-width: 600px) and (min-device-width: 320px) {
   body {
     padding: 0px;
     margin: 0px;
@@ -150,7 +194,7 @@ body {
     margin-left: 0;
     height: 100vh;
   }
-  
+
   .appname {
     font-size: 50px;
     margin-top: 100px;
@@ -164,7 +208,7 @@ body {
   .circle {
     height: 600px;
     width: 600px;
-    border: 15px solid #F3E8D6;
+    border: 15px solid #f3e8d6;
     margin-left: -500px;
     margin-top: -30px;
   }
@@ -201,29 +245,58 @@ body {
   }
 
   .weathercard h6 {
-    margin-left: calc(100% - 50px);
+    margin-left: calc(100% - 100px);
     margin-top: -30px;
+  }
+
+  .weathercard img {
+    margin-left: calc(100% - 120px);
   }
 
   .inputdiv {
     margin-top: 00px;
     padding: 10px;
     margin-left: 70px;
-  } 
+  }
 
   .submitbtn {
     width: 150px;
     height: 50px;
     margin-left: 30px;
-    
+  }
+
+  .forecastbtn {
+    margin-top: 600px;
   }
 
   .inputbar {
     text-align: center;
     width: 200px;
     height: 50px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 300;
     font-size: 16px;
+  }
+
+  .main {
+    max-width: 400px;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: -110px;
+  }
+
+  .singlecard {
+    height: 350px;
+    justify-content: center;
+  }
+  .forecastcard {
+    width: 250px;
+    height: 270px;
+    font-size: 20px;
+    margin-bottom: 0px;
+    box-shadow: 10px 10px 20px 20px rgb(120 120 120 / 25%);
   }
 }
