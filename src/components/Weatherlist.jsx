@@ -2,7 +2,7 @@ import React from "react";
 import Card from "./Card";
 
 const Weatherlist = ({ weathers }) => {
-    // console.log(weathers);
+    console.log(weathers);
     const { weather } = weathers;
     const { sys } = weathers;
     const { country } = sys
@@ -12,7 +12,7 @@ const Weatherlist = ({ weathers }) => {
     const { main } = weathers;
     const {
         
-        feels_like: currentTemp,
+        temp: currentTemp,
         temp_min,
         temp_max,
         
