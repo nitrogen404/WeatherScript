@@ -13,7 +13,7 @@ export default function App() {
     const { forecastData, err, loading, setURL } = useForecast();
     const handleapierr = () => {
         if (error) return <center><h2 style={{marginTop: "180px", position: "absolute"}}>Error when fetching {error}</h2></center>
-        if (!apidata && isLoading) return <center><h2 style={{marginLeft: "390px", marginTop: "180px", position: "absolute"}}>Loading...</h2></center>
+        if (!apidata && isLoading) return <center><h2 style={{marginTop: "180px", position: "absolute"}}>Loading...</h2></center>
         if (!apidata) return null;
         return <Weatherlist weathers={apidata} />
     }
