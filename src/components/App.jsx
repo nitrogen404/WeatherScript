@@ -31,12 +31,12 @@ export default function App() {
             <Text.Paragraph content="Designed and Developed by Chandan & Aditya" />
         </div>
         <div>
-            <Searchcity onSearch={(city) => setUrl(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${process.env.REACT_APP_API_KEY}`)} />
+            <Searchcity onSearch={(city) => setUrl(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${process.env.REACT_APP_API_KEY}`)} />
             {handleapierr()}
         </div>
         <div className="forecastbtn">
             <h1>Get Forecast</h1>
-            <Searchcity onSearch={(city) => setURL(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&cnt=4&units=metric&appid=${process.env.REACT_APP_API_KEY}`)}/>
+            <Searchcity onSearch={(city) => setURL(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&cnt=4&units=metric&appid=${process.env.REACT_APP_API_KEY}`)}/>
             {handleforeerr()}
         </div>
     </div>  
