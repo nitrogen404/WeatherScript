@@ -9,16 +9,17 @@ import * as Text from "./Text";
 import Forecast from "./Forecast" 
 
 export default function App() {
-    const { apidata, error, setUrl } = useFetch();
-    const { forecastData, err, setURL } = useForecast();
+    const { apidata, error, isLoading, setUrl } = useFetch();
+    const { forecastData, err, loading, setURL } = useForecast();
     const handleapierr = () => {
-        if (error) return <center><h2 style={{marginLeft: "390px", marginTop: "180px", position: "absolute"}}>Error when fetching {error}</h2></center>
+        if (error) return <center><h2 style={{marginTop: "180px", position: "absolute"}}>Error when fetching {error}</h2></center>
+        if (!apidata && isLoading) return <center><h2 style={{marginTop: "180px", position: "absolute"}}>Loading...</h2></center>
         if (!apidata) return null;
         return <Weatherlist weathers={apidata} />
     }
     const handleforeerr = () => {
         if (err) return <center><h2 style={{marginTop: "180px", position: "absolute"}}>Error when fetching {err}</h2></center>
-        
+        if (!forecastData && loading) return <center><h2 style={{marginTop: "180px", position: "absolute"}}>Loading...</h2></center>
         if (!forecastData) return null;
         return <Forecast forecastdata={forecastData.list} />
     }
