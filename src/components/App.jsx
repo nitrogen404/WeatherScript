@@ -9,9 +9,21 @@ import * as Text from "./Text";
 import Forecast from "./Forecast" 
 
 export default function App() {
-    const { apidata, setUrl } = useFetch();
-    const { forecastData, setURL } = useForecast();
-    
+    const { apidata, error, isLoading, setUrl } = useFetch();
+    const { forecastData, err, loading, setURL } = useForecast();
+    const handleapierr = () => {
+        if (error) return <center><h2 style={{marginLeft: "390px", marginTop: "180px", position: "absolute"}}>Error when fetching {error}</h2></center>
+        if (!apidata && isLoading) return <center><h2 style={{marginLeft: "390px", marginTop: "180px", position: "absolute"}}>Loading...</h2></center>
+        if (!apidata) return null;
+        return <Weatherlist weathers={apidata} />
+    }
+    const handleforeerr = () => {
+        if (err) return <center><h2 style={{marginLeft: "390px", marginTop: "180px", position: "absolute"}}>Error when fetching {err}</h2></center>
+        if (!forecastData && loading) return <center><h2 style={{marginLeft: "390px", marginTop: "180px", position: "absolute"}}>Loading...</h2></center>
+        if (!forecastData) return null;
+        return <Forecast forecastdata={forecastData.list} />
+    }
+
     return <div className="container">
         <Particles className="particles" width='100vw' height="100vh" params={config} />
         <div className="text">
@@ -20,13 +32,12 @@ export default function App() {
         </div>
         <div>
             <Searchcity onSearch={(city) => setUrl(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${process.env.REACT_APP_API_KEY}`)} />
-            
-            {apidata && <Weatherlist weathers={apidata} />}
-            
+            {handleapierr()}
         </div>
         <div className="forecastbtn">
-            <Searchcity onSearch={(city) => setURL(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&cnt=4&units=metric&appid=${process.env.REACT_APP_API_KEY}`)} />
-            {forecastData && <Forecast forecastdata={forecastData.list} />}
+            <h1>Get Forecast</h1>
+            <Searchcity onSearch={(city) => setURL(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&cnt=4&units=metric&appid=${process.env.REACT_APP_API_KEY}`)}/>
+            {handleforeerr()}
         </div>
     </div>  
 }
