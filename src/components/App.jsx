@@ -35,7 +35,7 @@ export default function App() {
             {handleapierr()}
         </div>
         <div className="forecastbtn">
-            <h1>Get Forecast</h1>
+            <center><h1>Get Forecast</h1></center>
             <Searchcity onSearch={(city) => setURL(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&cnt=4&units=metric&appid=${process.env.REACT_APP_API_KEY}`)}/>
             {handleforeerr()}
         </div>
