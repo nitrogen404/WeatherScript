@@ -1,0 +1,310 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.container {
+  width: 100%;
+}
+
+.text {
+  margin-top: -420px;
+  z-index: 3;
+}
+
+.particles {
+  display: block;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: -150px;
+}
+
+.appname {
+  display: inline-block;
+  margin-left: 270px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 100px;
+  font-weight: 800;
+}
+
+.reactangle {
+  margin-top: 50px;
+  margin-left: 470px;
+  height: 30px;
+  width: 350px;
+  background-color: #d6e8ef;
+}
+
+.credits {
+  margin-top: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+  text-align: center;
+}
+
+.circle {
+  border: 25px solid #f3e8d6;
+  background-color: transparent;
+  height: 800px;
+  width: 800px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  margin-top: 00px;
+  margin-left: -700px;
+  float: left;
+  z-index: -1;
+}
+
+.middlebody {
+  z-index: 1;
+  margin-top: 300px;
+}
+
+.weathercard {
+  z-index: 2;
+  width: 900px;
+  height: 400px;
+  position: absolute;
+  background-color: #d3dce7;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 35px;
+  box-shadow: 20px 20px 30px 10px rgba(120, 120, 120, 0.25);
+  border-radius: 50px;
+  padding: 70px;
+  margin-top: 200px;
+  margin-left: 200px;
+}
+
+.weathercard h1 {
+  font-size: 72px;
+  font-weight: 600;
+  margin-top: 70px;
+}
+
+.weathercard h3 {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.weathercard h5 {
+  margin-left: 0px;
+}
+
+.weathercard h6 {
+  margin-left: calc(100% - 70px);
+}
+
+.weathercard img {
+  margin-left: calc(100% - 90px);
+  margin-top: -300px;
+  position: relative;
+  margin-bottom: 100px;
+  height: 150px;
+  width: 150px;
+}
+
+.inputdiv {
+  position: absolute;
+  margin-top: 00px;
+  margin-left: 480px;
+  padding: 10px;
+}
+
+.inputbar {
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 5px;
+  width: 300px;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 19px;
+  border: none;
+  text-align: center;
+}
+
+.submitbtn {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  box-shadow: 5px 5px 5px 3px rgba(120, 120, 120, 0.25);
+  background-color: #1c89ff;
+  color: #fff;
+  width: 200px;
+  height: 50px;
+  border-radius: 20px;
+  border: none;
+  margin-top: 80px;
+  margin-left: 55px;
+}
+
+.forecastbtn {
+  margin-top: 700px;
+}
+
+.forecastbtn h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  display: inline-block;
+  margin-left: 470px;
+}
+
+.main {
+  max-width: 1200px;
+  margin-top: 100px;
+  position: absolute;
+  margin-left: 125px;
+}
+
+.cards {
+  margin-top: 150px;
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.singlecard {
+  padding: 60px;
+  display: inline-block;
+}
+
+/* 411019 */
+.forecastcard {
+  width: 400px;
+  height: 300px;
+  background-color: #f3e8d6;
+  box-shadow: 20px 20px 30px 10px rgb(120 120 120 / 25%);
+  border-radius: 50px;
+  padding: 50px;
+  justify-content: center;
+}
+
+@media only screen and (max-device-width: 600px) and (min-device-width: 320px) {
+  body {
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: 100vw;
+  }
+
+  .particles {
+    width: 100%;
+    margin-left: 0;
+    height: 100vh;
+  }
+
+  .appname {
+    font-size: 50px;
+    margin-top: 100px;
+    margin-left: 0px;
+  }
+
+  .reactangle {
+    right: 170px;
+  }
+
+  .circle {
+    height: 600px;
+    width: 600px;
+    border: 15px solid #f3e8d6;
+    margin-left: -500px;
+    margin-top: -30px;
+  }
+
+  .credits {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-left: 0px;
+  }
+
+  .weathercard {
+    width: 370px;
+    height: 300px;
+    margin-left: 0px;
+    margin-top: 210px;
+    font-size: 25px;
+    padding: 36px;
+  }
+
+  .weathercard h1 {
+    font-size: 60px;
+    font-weight: 600;
+    margin-top: 55px;
+  }
+
+  .weathercard h3 {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  .weathercard h5 {
+    margin-left: 0px;
+  }
+
+  .weathercard h6 {
+    margin-left: calc(100% - 100px);
+    margin-top: -30px;
+  }
+
+  .weathercard img {
+    margin-left: calc(100% - 120px);
+  }
+
+  .inputdiv {
+    margin-top: 00px;
+    padding: 10px;
+    margin-left: 70px;
+  }
+
+  .submitbtn {
+    width: 150px;
+    height: 50px;
+    margin-left: 30px;
+  }
+
+  .forecastbtn {
+    margin-top: 600px;
+  }
+
+  .inputbar {
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+  }
+
+  .main {
+    max-width: 400px;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: -110px;
+  }
+
+  .singlecard {
+    height: 350px;
+    justify-content: center;
+  }
+  .forecastcard {
+    width: 250px;
+    height: 270px;
+    font-size: 20px;
+    margin-bottom: 0px;
+    box-shadow: 10px 10px 20px 20px rgb(120 120 120 / 25%);
+  }
+}
